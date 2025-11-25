@@ -31,3 +31,39 @@
     setTimeout(()=> setOpen(false), 80);
   });
 })();
+
+
+
+
+
+
+
+
+
+/* intersection observer animation code */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      // If you want animation to run only once:
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el))
+
+
+
+
+
+
+
+
+
+/* footer section's js code */
+document.addEventListener('DOMContentLoaded', () => {
+  const y = document.getElementById('alt-footer-year');
+  if (y) y.textContent = new Date().getFullYear();
+});
