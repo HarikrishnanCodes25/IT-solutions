@@ -1,0 +1,311 @@
+:root {
+  --header-height: 56px; /* adjust if your header is taller */
+}
+
+/* Safety & reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;      /* prevent horizontal scroll caused by off-screen elements */
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f8fb;
+  color: #041025;
+  line-height: 1.35;
+}
+
+/* make container responsive instead of fixed width */
+.container {
+  max-width: 1500px; /* keeps your wide desktop layout */
+  width: 100%;       /* allows it to shrink on small screens */
+  margin: 0 auto;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  background: #041025;
+  color: #e9f0f7;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+  height: var(--header-height);
+}
+
+/* allow nav to shrink inside flex row (prevents overflow) */
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: space-between;
+  height: 100%;
+  min-width: 0; /* IMPORTANT: allow children to shrink */
+}
+
+
+
+/* keep brand / actions from growing so nav can shrink */
+.brand { flex: 0 0 auto; }
+.header-actions { flex: 0 0 auto; }
+/* Brand */
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  text-decoration: none; 
+  color: inherit; 
+}
+.brand img { 
+  width: 40px; 
+  height: 40px; 
+  object-fit: contain; 
+  border-radius: 6px; 
+  display: block; 
+}
+.brand-title { 
+  display: flex; 
+  flex-direction: column; 
+}
+.brand-title .title { 
+  font-weight: 700; 
+  font-size: 16px; 
+  line-height: 1; 
+}
+.brand-title .sub { 
+  font-size: 12px; 
+  color: #9aa8bd; 
+  margin-top: 2px; 
+}
+
+
+/* ensure the center nav can shrink to zero when needed */
+.navBar {
+  flex: 1;
+  min-width: 0; /* IMPORTANT for flex children to shrink properly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.navLinks { 
+  display: flex; 
+}
+/* allow list to shrink in narrow width */
+.linkRight {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  min-width: 0; /* allow items to wrap / overflow into mobile panel */
+}
+.linkRight li { 
+  position: relative; 
+}
+.linkRight a { 
+  color: #e9f0f7; 
+  font-weight: 600; 
+  text-decoration: none; 
+  padding: 8px 10px; 
+  border-radius: 8px; 
+  display: inline-block; 
+  transition: background .18s ease, 
+  transform .12s ease; }
+.linkRight a:hover, .linkRight a:focus { 
+  transform: translateY(-2px); 
+  background: rgba(255,255,255,0.02); 
+  outline: none; 
+}
+
+/* Remove bullets for ULs */
+.navLinks ul, .dropdown-menu { 
+  list-style: none; 
+  margin: 0; 
+  padding-left: 0; 
+}
+
+/* Dropdown (desktop) */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  background: #06264D;
+  border-radius: 8px;
+  padding: 8px 6px;
+  display: none;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  z-index: 40;
+}
+.dropdown-menu li { 
+  border-radius: 6px; 
+}
+.dropdown-menu a { 
+  color: #E0E6ED; 
+  display: block; 
+  font-weight: 600; 
+  padding: 8px 10px; 
+  text-decoration: none; 
+}
+.dropdown:hover > .dropdown-menu, .dropdown:focus-within > .dropdown-menu { 
+  display: block; 
+}
+
+/* Actions */
+.header-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
+.btn-cta { 
+  background: linear-gradient(90deg,#00d4b8,#2bb7ff); 
+  color: #041025; 
+  border: none; 
+  padding: 10px 14px; 
+  border-radius: 8px; 
+  font-weight: 800; 
+  cursor: pointer; 
+  box-shadow: 0 10px 26px rgba(43,103,255,0.08); 
+  transition: transform .12s ease; 
+}
+.btn-cta:hover { 
+  transform: translateY(-3px); 
+}
+
+/* make hamburger clearly above other elements on small screens */
+.hamburger {
+  display: none;
+  background: transparent;
+  color: #e9f0f7;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 130; /* ensure it is clickable above other content */
+}
+
+/* Prevent scroll when mobile nav open */
+.no-scroll { 
+  overflow: hidden; 
+}
+
+/* ---------- Mobile (<=768px) - FIXED PANEL to avoid clipping & overflow ---------- */
+@media (max-width: 768px) {
+  .header-row { gap: 12px; padding: 0 6px; }
+
+  .navLinks { display: none; }
+  .hamburger { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* hide subtitle */
+  .brand-title .sub { 
+    display: none; 
+  }
+
+  /* mobile panel (fixed, constrained) */
+  .navBar.open { 
+    position: relative; 
+  }
+    /* mobile panel rules you already have — keep them */
+  .navBar.open .navLinks {
+    display: flex;
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    top: calc(var(--header-height) + 10px);
+    background: #041025;
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 12px 40px rgba(2,6,23,0.55);
+    z-index: 99999;
+    max-height: calc(100vh - (var(--header-height) + 40px));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+  }
+
+  .navBar.open .linkRight {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+  }
+  .navBar.open .linkRight a { 
+    padding: 12px 10px; 
+    border-radius: 8px; 
+    background: transparent; 
+    text-align: left; 
+  }
+
+  /* dropdown children inline inside mobile panel */
+  .navBar.open .dropdown-menu {
+    position: static;
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 16px;
+    border: none;
+  }
+  .navBar.open .dropdown-menu a { 
+    color: #9aa8bd; 
+    padding: 8px 0; 
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Demo page spacing */
+main { 
+  max-width: 1200px; 
+  margin: 24px auto; 
+  padding: 0 18px; 
+}
+.hero { 
+  background: #fff; 
+  padding: 24px; 
+  border-radius: 10px; 
+  box-shadow: 0 8px 20px rgba(3,10,24,0.06); 
+  color: #041025; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
