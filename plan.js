@@ -41,8 +41,10 @@
 
 
 
-// Different Animations on Different Elements
 
+
+
+/* multiple animation js code */
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -61,16 +63,35 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
 
 
 
+/* switches prices between monthly and yearly */
+(function(){
+    const toggle = document.getElementById('billing-toggle');
+    if(!toggle) return;
 
-/* faq section js code */
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.parentElement;
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !expanded);
-    item.classList.toggle('active');
-  });
-});
+    const updatePrices = (yearly) => {
+      document.querySelectorAll('.price').forEach(el => {
+        const monthly = el.getAttribute('data-monthly');
+        const yearly = el.getAttribute('data-yearly');
+        const amountEl = el.querySelector('.amount');
+        const periodEl = el.querySelector('.period');
+        if(yearly){
+          amountEl.textContent = el.getAttribute('data-yearly');
+          periodEl.textContent = '/yr';
+        } else {
+          amountEl.textContent = el.getAttribute('data-monthly');
+          periodEl.textContent = '/mo';
+        }
+      });
+    };
+
+    // initial state (unchecked = monthly)
+    updatePrices(toggle.checked);
+
+    toggle.addEventListener('change', (e) => {
+      updatePrices(e.target.checked);
+    });
+  })();
+
 
 
 

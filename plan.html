@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Header Demo</title>
+  <link rel="stylesheet" href="./plan.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="right">
+    <a class="brand" href="./404.html" title="Hari IT Solutions">
+      <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+        <span class="sub">Cloud • DevOps</span>
+        <span class="sub">Web • Security</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false"><span>H</span>ome ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html"><span>H</span>ome page 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./service.html"><span>S</span>ervice</a></li>
+          <li><a href="./process.html"><span>O</span>ur Working Process</a></li>
+          <li><a href="./plan.html"><span>P</span>ricing Plans</a></li>
+          <li><a href="./testimonial.html"><span>T</span>estimonial & <span>C</span>lients</a></li>
+          <!-- <li><a href="./dashboard.html"><span>C</span>lients</a></li> -->
+          <!-- <li><a href="./dashboard.html"><span>L</span>ogIn</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='#consult'">Get Consultation</button>
+  </div>
+</header>
+
+
+
+
+<!-- <main class="jump container" data-animate="jump">
+  
+</main> -->
+
+
+
+
+
+
+<section class="fade pricing" data-animate="fade" aria-labelledby="pricing-heading">
+  <div class="pricing-inner">
+    <header class="pricing-header">
+      <small class="kicker">✅ Pricing</small>
+      <h2 id="pricing-heading">Choose the plan that fits your team</h2>
+      <p class="lead">Monthly and yearly billing available. Save more when you choose yearly.</p>
+
+      <div class="billing-toggle" aria-hidden="false">
+        <span class="toggle-label">Monthly</span>
+        <label class="switch" aria-label="Toggle billing period">
+          <input id="billing-toggle" type="checkbox" aria-controls="plans" />
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Yearly <small class="save">Save 20%</small></span>
+      </div>
+    </header>
+
+    <!-- Plans grid -->
+    <div id="plans" class="plans-grid" role="list">
+      <!-- Basic -->
+      <article class="plan" role="listitem" aria-labelledby="plan-basic">
+        <div class="plan-head">
+          <h3 id="plan-basic">Basic</h3>
+          <p class="plan-sub">For small projects & experiments</p>
+        </div>
+        <div class="price" data-monthly="9" data-yearly="86">
+          <span class="currency">₹</span><span class="amount">9</span><span class="period">/mo</span>
+        </div>
+        <ul class="features">
+          <li>Up to 3 users</li>
+          <li>5 GB storage</li>
+          <li>Email support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <div class="plan-cta">
+          <a class="btn btn-outline" href="#contact">Request Quote</a>
+          <a class="btn btn-primary" href="#signup">Get Started</a>
+        </div>
+      </article>
+
+      <!-- Standard (Most popular) -->
+      <article class="plan plan-popular" role="listitem" aria-labelledby="plan-standard">
+        <div class="badge">Most popular</div>
+        <div class="plan-head">
+          <h3 id="plan-standard">Standard</h3>
+          <p class="plan-sub">For growing teams and production apps</p>
+        </div>
+        <div class="price" data-monthly="29" data-yearly="314">
+          <span class="currency">₹</span><span class="amount">29</span><span class="period">/mo</span>
+        </div>
+        <ul class="features">
+          <li>Up to 10 users</li>
+          <li>50 GB storage</li>
+          <li>Priority email support</li>
+          <li>Advanced analytics & integrations</li>
+        </ul>
+        <div class="plan-cta">
+          <a class="btn btn-outline" href="#contact">Request Quote</a>
+          <a class="btn btn-primary" href="#signup">Get Started</a>
+        </div>
+      </article>
+
+      <!-- Premium -->
+      <article class="plan" role="listitem" aria-labelledby="plan-premium">
+        <div class="plan-head">
+          <h3 id="plan-premium">Premium</h3>
+          <p class="plan-sub">Enterprise features, SLA & custom onboarding</p>
+        </div>
+        <div class="price" data-monthly="79" data-yearly="858">
+          <span class="currency">₹</span><span class="amount">79</span><span class="period">/mo</span>
+        </div>
+        <ul class="features">
+          <li>Unlimited users</li>
+          <li>500 GB storage</li>
+          <li>24/7 phone & email support</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <div class="plan-cta">
+          <a class="btn btn-outline" href="#contact">Request Quote</a>
+          <a class="btn btn-primary" href="#signup">Get Started</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Feature comparison table -->
+    <div class="comparison">
+      <h4>Feature comparison</h4>
+      <table class="compare-table" role="table" aria-label="Feature comparison">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Basic</th>
+            <th scope="col">Standard</th>
+            <th scope="col">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Users</th>
+            <td>Up to 3</td>
+            <td>Up to 10</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <th scope="row">Storage</th>
+            <td>5 GB</td>
+            <td>50 GB</td>
+            <td>500 GB</td>
+          </tr>
+          <tr>
+            <th scope="row">Support</th>
+            <td>Email</td>
+            <td>Priority Email</td>
+            <td>24/7 Phone & Email</td>
+          </tr>
+          <tr>
+            <th scope="row">Integrations</th>
+            <td>Basic</td>
+            <td>Advanced</td>
+            <td>Advanced + Custom</td>
+          </tr>
+          <tr>
+            <th scope="row">SLA</th>
+            <td>—</td>
+            <td>—</td>
+            <td>99.9%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- <main class="fade wrap" data-animate="fade">
+  
+</main> -->
+
+<!-- <div class="slide" data-animate="slide">Slide Box</div> -->
+
+
+
+
+<!-- START: alternative footer -->
+<footer class="alt-footer">
+  <div class="alt-footer-inner">
+    <div class="alt-brand">
+      <a class="alt-logo" href="./">
+        <img src="./bc remove logo.webp" alt="IT Solutions" width="44" height="44">
+      </a>
+      <div class="alt-about">
+        <h3>IT Solutions</h3>
+        <p>Cloud • DevOps • Web • Security — practical solutions for growing teams.</p>
+      </div>
+    </div>
+
+    <div class="alt-links">
+      <div class="alt-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="./404.html">About</a></li>
+          <li><a href="./404.html">Careers</a></li>
+          <li><a href="./404.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="alt-links-group">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="./404.html">Services</a></li>
+          <li><a href="./404.html">Blog</a></li>
+          <li><a href="./404.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-cta">
+
+      <h4>Socila media</h4>
+      <div class="social-link">
+        <a href="./404.html"> 
+            <img src="./facebook (1).webp" alt="facebook" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./instagram (1).webp" alt="instagram" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./twitter (1).webp" alt="twitter" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./linkedin (1).webp" alt="linkedin" width="400px">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="alt-footer-bottom">
+    <small>© <span id="alt-footer-year"></span> IT Solutions — All rights reserved.</small>
+  </div>
+</footer>
+<!-- END: alternative footer -->
+
+
+<script src="./plan.js"></script>
+</body>
+</html>

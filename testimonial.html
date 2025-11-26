@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Header Demo</title>
+  <link rel="stylesheet" href="./testimonial.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="right">
+    <a class="brand" href="./404.html" title="Hari IT Solutions">
+      <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+        <span class="sub">Cloud • DevOps</span>
+        <span class="sub">Web • Security</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false"><span>H</span>ome ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html"><span>H</span>ome page 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./service.html"><span>S</span>ervice</a></li>
+          <li><a href="./process.html"><span>O</span>ur Working Process</a></li>
+          <li><a href="./plan.html"><span>P</span>ricing Plans</a></li>
+          <li><a href="./testimonial.html"><span>T</span>estimonial & <span>C</span>lients</a></li>
+          <!-- <li><a href="./dashboard.html"><span>C</span>lients</a></li> -->
+          <!-- <li><a href="./dashboard.html"><span>L</span>ogIn</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='#consult'">Get Consultation</button>
+  </div>
+</header>
+
+
+
+
+
+
+<section class="slide testimonials" data-animate="slide" aria-labelledby="testimonials-heading">
+  <div class="wrap">
+    <header class="testi-header">
+      <small class="kicker">✅ Social Proof</small>
+      <h2 id="testimonials-heading">What our clients say</h2>
+      <p class="lead">Real feedback from teams using our IT services — reliability, delivery, and impact.</p>
+    </header>
+
+    <!-- Toggle this wrapper to "testi-list carousel-mode" to enable the JS carousel -->
+    <div class="testi-list" id="testiList" role="list">
+      <!-- testimonial 1 -->
+      <article class="testi" role="listitem">
+        <div class="meta">
+          <img class="avatar" src="https://via.placeholder.com/72" alt="Photo of Priya - CTO, Acme Co">
+          <div class="who">
+            <strong class="name">Priya Sharma</strong>
+            <span class="company">CTO, Acme Co</span>
+            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </div>
+        <blockquote class="quote">
+          “Their team delivered our platform two weeks early. Stable deployment and excellent documentation — highly recommended.”
+        </blockquote>
+      </article>
+
+      <!-- testimonial 2 -->
+      <article class="testi" role="listitem">
+        <div class="meta">
+          <img class="avatar" src="https://via.placeholder.com/72" alt="Photo of Raj - Product Manager, Nova Labs">
+          <div class="who">
+            <strong class="name">Raj Patel</strong>
+            <span class="company">Product Manager, Nova Labs</span>
+            <div class="rating" aria-label="4 out of 5 stars">★★★★☆</div>
+          </div>
+        </div>
+        <blockquote class="quote">
+          “Clear communication throughout sprints and fast iteration on feedback — our users noticed the improvements immediately.”
+        </blockquote>
+      </article>
+
+      <!-- testimonial 3 -->
+      <article class="testi" role="listitem">
+        <div class="meta">
+          <img class="avatar" src="https://via.placeholder.com/72" alt="Photo of Maya - Head of Ops, Bluewave">
+          <div class="who">
+            <strong class="name">Maya Lopez</strong>
+            <span class="company">Head of Ops, Bluewave</span>
+            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+          </div>
+        </div>
+        <blockquote class="quote">
+          “Excellent support and a robust SLA. Minimal downtime and proactive monitoring saved us hours every month.”
+        </blockquote>
+      </article>
+
+      <!-- add more testimonials as needed -->
+    </div>
+
+    <!-- Optional carousel controls (visible when JS-enabled carousel-mode is active) -->
+    <div class="testi-controls" aria-hidden="true">
+      <button id="prevTesti" class="ctrl">‹</button>
+      <button id="nextTesti" class="ctrl">›</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="box fade" data-animate="fade">Fade In Box</div> -->
+
+
+<section class="jump clients" data-animate="jump" aria-labelledby="clients-heading">
+  <div class="clients-inner">
+    <header class="clients-header">
+      <small class="kicker">✅ Trust</small>
+      <h2 id="clients-heading">Our Clients</h2>
+      <p class="lead">Trusted by startups, fast-growing SaaS teams, and large enterprises across industries.</p>
+      <div class="client-stats">
+        <strong class="count">500+</strong>
+        <span class="text">clients worldwide</span>
+      </div>
+    </header>
+
+    <!-- Logos grid -->
+    <div class="logo-grid" role="list" aria-label="Client logos">
+      <!-- Example logos: replace src with real logo images (prefer SVG/PNG). Use alt text. -->
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+1" alt="Client 1 - Fintech" />
+      </div>
+
+      <div class="logo highlight" role="listitem" tabindex="0" aria-label="Big partner: Acme Corp">
+        <img src="https://via.placeholder.com/200x80?text=Acme+Corp" alt="Acme Corporation" />
+      </div>
+
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+3" alt="Client 3 - Healthcare" />
+      </div>
+
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+4" alt="Client 4 - Retail" />
+      </div>
+
+      <div class="logo highlight" role="listitem" tabindex="0" aria-label="Big partner: Nova Labs">
+        <img src="https://via.placeholder.com/200x80?text=Nova+Labs" alt="Nova Labs" />
+      </div>
+
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+6" alt="Client 6 - Education" />
+      </div>
+
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+7" alt="Client 7 - Logistics" />
+      </div>
+
+      <div class="logo" role="listitem" tabindex="0">
+        <img src="https://via.placeholder.com/200x80?text=Client+8" alt="Client 8 - Media" />
+      </div>
+
+      <!-- add more logos as needed -->
+    </div>
+
+    <!-- Industries list -->
+    <div class="industries">
+      <h3>Industries we work with</h3>
+      <ul>
+        <li>Fintech</li>
+        <li>SaaS & Cloud</li>
+        <li>Healthcare</li>
+        <li>Retail & E-commerce</li>
+        <li>Education</li>
+        <li>Logistics & Mobility</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- <div class="box fade" data-animate="fade">Fade In Box</div>
+<div class="box jump" data-animate="jump">Jump Box</div>
+<div class="box slide" data-animate="slide">Slide Box</div> -->
+
+
+
+
+<!-- START: alternative footer -->
+<footer class="alt-footer">
+  <div class="alt-footer-inner">
+    <div class="alt-brand">
+      <a class="alt-logo" href="./">
+        <img src="./bc remove logo.webp" alt="IT Solutions" width="44" height="44">
+      </a>
+      <div class="alt-about">
+        <h3>IT Solutions</h3>
+        <p>Cloud • DevOps • Web • Security — practical solutions for growing teams.</p>
+      </div>
+    </div>
+
+    <div class="alt-links">
+      <div class="alt-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="./404.html">About</a></li>
+          <li><a href="./404.html">Careers</a></li>
+          <li><a href="./404.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="alt-links-group">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="./404.html">Services</a></li>
+          <li><a href="./404.html">Blog</a></li>
+          <li><a href="./404.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-cta">
+
+      <h4>Socila media</h4>
+      <div class="social-link">
+        <a href="./404.html"> 
+            <img src="./facebook (1).webp" alt="facebook" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./instagram (1).webp" alt="instagram" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./twitter (1).webp" alt="twitter" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./linkedin (1).webp" alt="linkedin" width="400px">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="alt-footer-bottom">
+    <small>© <span id="alt-footer-year"></span> IT Solutions — All rights reserved.</small>
+  </div>
+</footer>
+<!-- END: alternative footer -->
+
+
+<script src="./testimonial.js"></script>
+</body>
+</html>

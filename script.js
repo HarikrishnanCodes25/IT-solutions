@@ -62,6 +62,12 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el))
 
 
 
+
+
+
+
+
+
 /* footer section's js code */
 document.addEventListener('DOMContentLoaded', () => {
   const y = document.getElementById('alt-footer-year');

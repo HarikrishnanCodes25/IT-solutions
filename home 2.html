@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Header Demo</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./bc remove logo.webp">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="./home 2.css">
 </head>
 <body>
 
@@ -14,8 +15,8 @@
       <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
       <div class="brand-title">
         <span class="title">STACKLY</span>
-        <span class="sub">Cloud • DevOps</span>
-        <span class="sub">Web • Security</span>
+        <span class="sub">AI • Automation</span>
+        <!-- <span class="sub">Web • Security</span> -->
       </div>
     </a>
 
@@ -27,17 +28,17 @@
       <div class="navLinks">
         <ul class="linkRight">
           <li class="dropdown">
-            <a href="./home 2.html" aria-haspopup="true" aria-expanded="false">Home ▾</a>
+            <a href="./home 2.html" aria-haspopup="true" aria-expanded="false"><span>H</span>ome ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="./index.html">Home page 1</a></li>
+              <li><a href="./index.html"><span>H</span>ome page 1</a></li>
             </ul>
           </li>
           <!-- <li><a href="./feature.html">Service</a></li> -->
-          <li><a href="./finance.html">Product Features</a></li>
-          <li><a href="./drive.html">User Testimonials</a></li>
-          <li><a href="./buy.html">FAQ Section</a></li>
-          <li><a href="./dashboard.html">Newsletter Signup</a></li>
-          <li><a href="./dashboard.html">LogIn</a></li>
+          <li><a href="./features.html"><span>P</span>roduct Features</a></li>
+          <li><a href="./user.html"><span>U</span>ser Testimonials</a></li>
+          <li><a href="./faq.html"><span>F</span>AQ Section</a></li>
+          <li><a href="./news.html"><span>N</span>ewsletter Signup</a></li>
+          <!-- <li><a href="./#">LogIn</a></li> -->
         </ul>
       </div>
     </nav>
@@ -53,25 +54,295 @@
 
 
 
+<section class="jump hero" data-animate="jump"  aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <small class="kicker">✅ IT Solutions</small>
+      <h1 id="hero-heading">Build reliable, scalable software — fast.</h1>
+      <p class="sub">
+        We design, develop and operate cloud-ready web and mobile platforms for growing teams.
+        From architecture and implementation to monitoring and support — we make delivery simple.
+      </p>
 
-<section class="animate-on-scroll box1">
-    <h1>Animations 1</h1>
-    <p>Here’s a clear, practical explanation of how to use Intersection Observer with animations, plus a ready-to-use code example.</p>
+      <div class="hero-ctas" role="group" aria-label="Primary call to action">
+        <a class="btn btn-primary" href="#get-started">Get Started</a>
+        <a class="btn btn-outline" href="#contact">Contact Us</a>
+      </div>
+
+      <ul class="hero-features" aria-hidden="false">
+        <li>Cloud & DevOps</li>
+        <li>Secure & Compliant</li>
+        <li>Fast iteration & delivery</li>
+      </ul>
+    </div>
+
+    <img src="./img 3 (2).webp" alt="">
+
+    
+  </div>
 </section>
 
-<section class="animate-on-scroll box2">
-    <h1>Animations 2</h1>
-    <p>The Intersection Observer API allows you to detect when elements enter or leave the viewport. It’s lightweight, efficient, and perfect for triggering animations without scroll-event performance issues.</p>
+
+
+
+
+<!-- <section class="slide live-demo" data-animate="slide" aria-labelledby="demo-heading">
+ 
+</section> -->
+
+
+
+
+
+
+<section class="fade integrations" data-animate="fade" aria-labelledby="integrations-heading">
+  <div class="inner">
+    <header class="int-header">
+      <small class="kicker">✅ Integrations</small>
+      <h2 id="integrations-heading">Works with the tools you already use</h2>
+      <p class="lead">Connect to popular platforms quickly — collaboration, identity, infra, and code hosting.</p>
+    </header>
+
+    <div class="int-grid" role="list" aria-label="Integrations list">
+      <!-- Slack -->
+      <article class="int-card" role="listitem" tabindex="0">
+        <div class="logo" aria-hidden="true">
+          <!-- simple Slack-like SVG (use official logo file for production) -->
+          <svg width="56" height="56" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="6" height="6" rx="3" fill="#36C5F0"/>
+            <rect x="9" y="9" width="6" height="6" rx="3" fill="#E01E5A"/>
+            <rect x="15" y="3" width="6" height="6" rx="3" fill="#ECB22E"/>
+            <rect x="3" y="15" width="6" height="6" rx="3" fill="#2EB67D"/>
+          </svg>
+        </div>
+        <div class="int-body">
+          <h3>Slack</h3>
+          <p class="desc">Send alerts, notifications and deploy summaries to the channels your team uses.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#connect-slack">Connect</a>
+            <a class="link" href="#docs-slack">Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Google Workspace -->
+      <article class="int-card" role="listitem" tabindex="0">
+        <div class="logo" aria-hidden="true">
+          <!-- simple Google Workspace-ish SVG -->
+          <svg width="56" height="56" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 4h7v7H4z" fill="#4285F4"/>
+            <path d="M13 4h7v7h-7z" fill="#EA4335"/>
+            <path d="M4 13h7v7H4z" fill="#FBBC05"/>
+            <path d="M13 13h7v7h-7z" fill="#34A853"/>
+          </svg>
+        </div>
+        <div class="int-body">
+          <h3>Google Workspace</h3>
+          <p class="desc">Single sign-on, calendar invites, and document sharing made seamless.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#connect-gs">Connect</a>
+            <a class="link" href="#docs-gs">Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AWS -->
+      <article class="int-card" role="listitem" tabindex="0">
+        <div class="logo" aria-hidden="true">
+          <!-- simple AWS-like SVG -->
+          <svg width="56" height="56" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="12" cy="12" rx="9" ry="5.5" fill="#FF9900"/>
+            <path d="M4 12c2 1.5 4.5 2.5 8 2.5s6-1 8-2.5" fill="#000" opacity="0.06"/>
+          </svg>
+        </div>
+        <div class="int-body">
+          <h3>AWS</h3>
+          <p class="desc">Deploy, monitor, and manage cloud resources directly from the platform.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#connect-aws">Connect</a>
+            <a class="link" href="#docs-aws">Docs</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- GitHub -->
+      <article class="int-card" role="listitem" tabindex="0">
+        <div class="logo" aria-hidden="true">
+          <!-- simple GitHub-like SVG (use official mark if permitted) -->
+          <svg width="56" height="56" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#111"/>
+            <path d="M8 15c1 1 2 1 4 0s3-1 4 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="int-body">
+          <h3>GitHub</h3>
+          <p class="desc">Automatic CI triggers, PR checks, and deploy hooks for streamlined delivery.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#connect-gh">Connect</a>
+            <a class="link" href="#docs-gh">Docs</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- optional industries / note -->
+    <div class="int-footer">
+      <p class="note"><strong>Note:</strong> We also support Zapier, Azure AD, Jira, and many other integrations — contact us for custom connectors.</p>
+    </div>
+  </div>
 </section>
 
-<section class="animate-on-scroll box3">
-    <h1>Animations 3</h1>
-    <p>The Intersection Observer API allows you to detect when elements enter or leave the viewport. It’s lightweight, efficient, and perfect for triggering animations without scroll-event performance issues.The Intersection Observer API allows you to detect when elements enter or leave the viewport. It’s lightweight, efficient, and perfect for triggering animations without scroll-event performance issues.</p>
+
+
+
+
+
+
+
+
+<section class="fade stats" data-animate="fade" aria-labelledby="stats-heading">
+  <div class="container">
+    <header class="stats-header">
+      <small class="kicker">✅ Achievements</small>
+      <h2 id="stats-heading">Our Stats & Milestones</h2>
+      <p class="lead">Trusted by thousands of users worldwide with exceptional uptime and enterprise adoption.</p>
+    </header>
+
+    <div class="stats-grid" role="list" aria-label="Key statistics">
+      <article class="stat-card" role="listitem" tabindex="0">
+        <h3 class="stat-number">50k+</h3>
+        <p class="stat-text">Active Users</p>
+      </article>
+
+      <article class="stat-card" role="listitem" tabindex="0">
+        <h3 class="stat-number">99.9%</h3>
+        <p class="stat-text">Uptime</p>
+      </article>
+
+      <article class="stat-card" role="listitem" tabindex="0">
+        <h3 class="stat-number">300+</h3>
+        <p class="stat-text">Enterprise Clients</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section class="animate-on-scroll box4">
-    <h1>new animations</h1>
-    <p>The Intersection Observer API allows you to detect when elements enter or leave the viewport. It’s lightweight, efficient, and perfect for triggering animations without scroll-event performance issues.</p>
+
+
+
+
+
+
+
+
+<section class="jump faq" data-animate="jump" aria-labelledby="faq-heading">
+  <div class="container">
+    <header class="faq-header">
+      <small class="kicker">✅ FAQs</small>
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <p class="lead">Answers to the most common questions about our services and platform.</p>
+    </header>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is your service uptime guarantee?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We guarantee 99.9% uptime for all clients, with continuous monitoring and proactive issue resolution.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I integrate with Slack and Google Workspace?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>You can connect your workspace via our integrations panel in the dashboard with a few clicks — OAuth-secured.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you offer a trial period?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! We offer a 14-day free trial with full access to core features, no credit card required.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can I upgrade or downgrade my plan anytime?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely. You can switch plans from your account settings at any time. Billing is prorated automatically.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is my data secure?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. All data is encrypted in transit and at rest. We follow industry best practices and compliance standards.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you provide support for enterprises?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We offer 24/7 priority support for enterprise clients, including dedicated account managers and onboarding assistance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="slide download-app" data-animate="slide" aria-labelledby="download-heading">
+  <div class="container">
+    <header class="download-header">
+      <small class="kicker">✅ Get the App</small>
+      <h2 id="download-heading">Download Our Mobile App</h2>
+      <p class="lead">Access your dashboard and manage your projects on the go, anytime, anywhere.</p>
+    </header>
+
+    <div class="download-grid">
+      <!-- Left: mobile preview -->
+      <div class="mobile-preview">
+        <img src="https://via.placeholder.com/300x600?text=Mobile+UI+Preview" alt="Mobile App Preview" loading="lazy">
+      </div>
+
+      <!-- Right: download buttons -->
+      <div class="download-buttons">
+        <h3>Available on:</h3>
+        <div class="btn-group">
+          <a href="#ios" class="btn ios">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Ios_logo.svg" alt="iOS" class="btn-icon"> App Store
+          </a>
+          <a href="#android" class="btn android">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" class="btn-icon"> Google Play
+          </a>
+        </div>
+        <p class="note">Compatible with all modern iOS and Android devices.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -82,6 +353,71 @@
 
 
 
+
+<section class="fade product-showcase" data-animate="fade" aria-labelledby="showcase-heading">
+  <div class="container">
+    <header class="showcase-header">
+      <small class="kicker">✅ Product Showcase</small>
+      <h2 id="showcase-heading">Our Featured Products</h2>
+      <p class="lead">Explore our solutions designed to boost productivity, security, and collaboration.</p>
+    </header>
+
+    <div class="showcase-grid">
+      <!-- Product 1 -->
+      <article class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=Product+1" alt="Product 1" loading="lazy">
+        <div class="product-info">
+          <h3>Cloud Dashboard</h3>
+          <p>Manage all your cloud resources and analytics in one unified dashboard.</p>
+          <a href="#product1" class="btn">Learn More</a>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=Product+2" alt="Product 2" loading="lazy">
+        <div class="product-info">
+          <h3>Security Suite</h3>
+          <p>Protect your infrastructure with our advanced security monitoring tools.</p>
+          <a href="#product2" class="btn">Learn More</a>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=Product+3" alt="Product 3" loading="lazy">
+        <div class="product-info">
+          <h3>Collaboration Tool</h3>
+          <p>Enhance teamwork with real-time collaboration and workflow management features.</p>
+          <a href="#product3" class="btn">Learn More</a>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=Product+4" alt="Product 4" loading="lazy">
+        <div class="product-info">
+          <h3>Analytics Engine</h3>
+          <p>Make data-driven decisions with our AI-powered analytics and reporting tools.</p>
+          <a href="#product4" class="btn">Learn More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="box jump" data-animate="jump">Jump Box</section>
+<section class="box slide" data-animate="slide">Slide Box</section> -->
 
 
 <!-- START: alternative footer -->
@@ -101,38 +437,41 @@
       <div class="alt-links-group">
         <h4>Company</h4>
         <ul>
-          <li><a href="./feature.html">About</a></li>
-          <li><a href="./buy.html">Careers</a></li>
-          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./404.html">About</a></li>
+          <li><a href="./404.html">Careers</a></li>
+          <li><a href="./404.html">Dashboard</a></li>
         </ul>
       </div>
       <div class="alt-links-group">
         <h4>Resources</h4>
         <ul>
-          <li><a href="./finance.html">Services</a></li>
-          <li><a href="./drive.html">Blog</a></li>
-          <li><a href="./privacy.html">Privacy</a></li>
+          <li><a href="./404.html">Services</a></li>
+          <li><a href="./404.html">Blog</a></li>
+          <li><a href="./404.html">Privacy</a></li>
         </ul>
       </div>
     </div>
 
     <div class="alt-cta">
-      <h4>Stay updated</h4>
-      <form class="alt-newsletter" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed (demo)')">
+      <h4>Socila media</h4>
+
+      <!-- <form id="alt-newsletter" class="alt-newsletter" action="#" method="POST" novalidate>
         <input type="email" name="email" placeholder="Your email address" required>
         <button type="submit" class="alt-btn">Subscribe</button>
-      </form>
+      </form> -->
 
-      <div class="alt-social" aria-label="Social links">
-        <!-- simple SVG icons -->
-        <a href="#" aria-label="Twitter" class="social-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.92c-.63.28-1.3.47-2 .55.72-.43 1.28-1.1 1.55-1.9-.68.4-1.45.7-2.26.86C18.6 4.6 17.58 4 16.44 4c-1.87 0-3.39 1.52-3.39 3.4 0 .27.03.54.09.8-2.82-.14-5.32-1.49-7-3.54-.29.5-.45 1.08-.45 1.7 0 1.17.6 2.2 1.52 2.8-.56-.02-1.09-.17-1.55-.42v.04c0 1.64 1.17 3.01 2.72 3.32-.28.08-.57.12-.87.12-.21 0-.42-.02-.62-.06.42 1.3 1.63 2.24 3.07 2.26-1.12.88-2.53 1.4-4.06 1.4-.26 0-.52-.02-.78-.05 1.44.93 3.15 1.47 4.99 1.47 5.98 0 9.26-4.95 9.26-9.24l-.01-.42c.63-.45 1.17-1.02 1.6-1.66-.58.26-1.2.44-1.85.52z"/></svg>
+      <div class="social-link">
+        <a href="./404.html"> 
+            <img src="./facebook (1).webp" alt="facebook" width="400px">
         </a>
-        <a href="#" aria-label="LinkedIn" class="social-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-.99 1.84-2.04 3.79-2.04 4.05 0 4.8 2.67 4.8 6.14V21H19v-5.28c0-1.26 0-2.88-1.75-2.88-1.75 0-2.02 1.36-2.02 2.77V21H9V9z"/></svg>
+        <a href="./404.html">
+            <img src="./instagram (1).webp" alt="instagram" width="400px">
         </a>
-        <a href="#" aria-label="GitHub" class="social-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 012.91-.39c.99 0 1.99.13 2.91.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.85 1.19 3.1 0 4.43-2.7 5.4-5.27 5.68.41.35.77 1.06.77 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/></svg>
+        <a href="./404.html">
+            <img src="./twitter (1).webp" alt="twitter" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./linkedin (1).webp" alt="linkedin" width="400px">
         </a>
       </div>
     </div>
@@ -145,6 +484,7 @@
 <!-- END: alternative footer -->
 
 
-<script src="./script.js"></script>
+<script src="./home 2.js"></script>
 </body>
 </html>
+

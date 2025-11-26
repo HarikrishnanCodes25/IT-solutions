@@ -41,8 +41,9 @@
 
 
 
-// Different Animations on Different Elements
 
+
+/* multiple animation js code */
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -60,18 +61,45 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
 
 
 
+/* testimonial js code */
+(function(){
+  const list = document.getElementById('testiList');
+  if(!list) return;
 
+  const prev = document.getElementById('prevTesti');
+  const next = document.getElementById('nextTesti');
+  const controls = document.querySelector('.testi-controls');
 
-/* faq section js code */
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.parentElement;
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !expanded);
-    item.classList.toggle('active');
+  // show controls only in carousel mode
+  const carouselMode = list.classList.contains('carousel-mode');
+  if(carouselMode) controls.style.display = 'flex';
+
+  // simple horizontal slide by container width
+  const step = () => {
+    // compute slide width (one card)
+    const card = list.querySelector('.testi');
+    return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(list).gap || 0) : list.clientWidth;
+  };
+
+  prev?.addEventListener('click', () => {
+    list.scrollBy({left: -step(), behavior: 'smooth'});
   });
-});
 
+  next?.addEventListener('click', () => {
+    list.scrollBy({left: step(), behavior: 'smooth'});
+  });
+
+  // optional: enable swipe for touch
+  let startX = 0, isDown = false;
+  list.addEventListener('pointerdown', e => { isDown = true; startX = e.clientX; list.style.cursor='grabbing'; });
+  list.addEventListener('pointerup', () => { isDown=false; list.style.cursor=''; });
+  list.addEventListener('pointerleave', () => { isDown=false; list.style.cursor=''; });
+  list.addEventListener('pointermove', e => {
+    if(!isDown) return;
+    list.scrollLeft -= (e.clientX - startX);
+    startX = e.clientX;
+  });
+})();
 
 
 

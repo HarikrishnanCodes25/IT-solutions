@@ -61,24 +61,6 @@ document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
 
 
 
-
-/* faq section js code */
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.parentElement;
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', !expanded);
-    item.classList.toggle('active');
-  });
-});
-
-
-
-
-
-
-
-
 /* footer section's js code */
 document.addEventListener('DOMContentLoaded', () => {
   const y = document.getElementById('alt-footer-year');

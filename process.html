@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./bc remove logo.webp">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="./process.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="right">
+    <a class="brand" href="./404.html" title="Hari IT Solutions">
+      <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+        <span class="sub">Cloud • DevOps</span>
+        <span class="sub">Web • Security</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false"><span>H</span>ome ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html"><span>H</span>ome page 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./service.html"><span>S</span>ervice</a></li>
+          <li><a href="./process.html"><span>O</span>ur Working Process</a></li>
+          <li><a href="./plan.html"><span>P</span>ricing Plans</a></li>
+          <li><a href="./testimonial.html"><span>T</span>estimonial & <span>C</span>lients</a></li>
+          <!-- <li><a href="./dashboard.html"><span>C</span>lients</a></li> -->
+          <!-- <li><a href="./dashboard.html"><span>L</span>ogIn</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn-cta" onclick="location.href='#consult'">Get Consultation</button>
+  </div>
+</header>
+
+
+
+
+
+<!-- <section class="slide process-section" data-animate="slide">
+  
+</section> -->
+
+
+
+
+
+
+
+
+<main class="jump dp-detailed" data-animate="jump" aria-labelledby="dp-heading">
+  <div class="dp-inner">
+    <header class="dp-header">
+      <small class="dp-kicker">✅ Research Phase</small>
+      <h2 id="dp-heading">Discover &amp; Plan — What to include</h2>
+      <p class="dp-intro">
+        Each step below explains what we do, why it matters, typical activities, and common deliverables so clients know what to expect.
+      </p>
+    </header>
+
+    <ol class="dp-list" aria-describedby="dp-heading">
+      <!-- 1 -->
+      <li class="dp-step">
+        <div class="step-meta">
+          <span class="step-num">1</span>
+          <h3>Requirement Gathering</h3>
+        </div>
+        <div class="step-body">
+          <p class="step-desc">
+            Collect concrete functional and non-functional needs from stakeholders and users so the scope is well-defined.
+          </p>
+          <ul class="step-points">
+            <li><strong>Stakeholder interviews:</strong> Meet product owners, business users, and ops to capture expectations.</li>
+            <li><strong>User research:</strong> Surveys or quick interviews to learn user goals and pain points.</li>
+            <li><strong>Existing assets review:</strong> Audit current systems, APIs, data models, and documentation.</li>
+            <li><strong>Constraints capture:</strong> Budget, timeline, compliance, and platform limitations.</li>
+          </ul>
+          <p class="step-deliver">Deliverables: Requirements doc (priority backlog), personas summary, and an initial scope list.</p>
+        </div>
+      </li>
+
+      <!-- 2 -->
+      <li class="dp-step">
+        <div class="step-meta">
+          <span class="step-num">2</span>
+          <h3>Understanding Client Goals</h3>
+        </div>
+        <div class="step-body">
+          <p class="step-desc">
+            Ensure alignment on business outcomes and success metrics so every feature ties back to a measurable goal.
+          </p>
+          <ul class="step-points">
+            <li><strong>Define success metrics:</strong> KPIs like conversion rate, time-to-task, or cost-savings.</li>
+            <li><strong>Prioritization workshop:</strong> MoSCoW or RICE exercises to rank features by impact and effort.</li>
+            <li><strong>Stakeholder sign-off:</strong> Agreement on MVP vs. future phases and acceptance criteria.</li>
+          </ul>
+          <p class="step-deliver">Deliverables: Goals & KPIs doc, prioritized feature list, and acceptance criteria checklist.</p>
+        </div>
+      </li>
+
+      <!-- 3 -->
+      <li class="dp-step">
+        <div class="step-meta">
+          <span class="step-num">3</span>
+          <h3>Project Analysis</h3>
+        </div>
+        <div class="step-body">
+          <p class="step-desc">
+            Study technical feasibility, risks, integrations, and dependencies to reduce surprises during development.
+          </p>
+          <ul class="step-points">
+            <li><strong>Feasibility study:</strong> Prototype key flows or validate third-party APIs quickly.</li>
+            <li><strong>Risk assessment:</strong> Identify security, performance, and operational risks with mitigation steps.</li>
+            <li><strong>Data & integration mapping:</strong> Diagram data flows and touchpoints with external systems.</li>
+            <li><strong>Estimation:</strong> Rough effort estimates (T-shirt or story points) for planning purposes.</li>
+          </ul>
+          <p class="step-deliver">Deliverables: Risk log, integration diagrams, feasibility notes, and rough estimates.</p>
+        </div>
+      </li>
+
+      <!-- 4 -->
+      <li class="dp-step">
+        <div class="step-meta">
+          <span class="step-num">4</span>
+          <h3>Technology Selection</h3>
+        </div>
+        <div class="step-body">
+          <p class="step-desc">
+            Choose frameworks, hosting, and tools that best meet the goals, team skills, and constraints.
+          </p>
+          <ul class="step-points">
+            <li><strong>Evaluate options:</strong> Compare frontend, backend, database, and infra candidates by tradeoffs.</li>
+            <li><strong>Team fit:</strong> Prefer technologies your team can support or hire for quickly.</li>
+            <li><strong>Scalability & maintenance:</strong> Consider long-term costs and operability (CI/CD, monitoring).</li>
+            <li><strong>Licensing & vendor risk:</strong> Check open-source licenses and vendor lock-in exposure.</li>
+          </ul>
+          <p class="step-deliver">Deliverables: Tech-stack recommendation, rationale doc, and a short POC (if needed).</p>
+        </div>
+      </li>
+
+      <!-- 5 -->
+      <li class="dp-step">
+        <div class="step-meta">
+          <span class="step-num">5</span>
+          <h3>Roadmap Creation</h3>
+        </div>
+        <div class="step-body">
+          <p class="step-desc">
+            Translate priorities into an actionable phased plan with milestones, sprints, and review checkpoints.
+          </p>
+          <ul class="step-points">
+            <li><strong>Phase definition:</strong> Define MVP, phase 2, and long-term enhancements.</li>
+            <li><strong>Milestones & timelines:</strong> Set delivery windows, demo dates, and feedback loops.</li>
+            <li><strong>Team resourcing:</strong> Assign roles and identify hiring/training needs.</li>
+            <li><strong>Acceptance & launch plan:</strong> Define release criteria, rollout strategy, and post-launch support.</li>
+          </ul>
+          <p class="step-deliver">Deliverables: Roadmap timeline (Gantt or swimlane), sprint plan for MVP, and launch checklist.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</main>
+
+
+
+
+
+<!-- <div class="box fade" data-animate="fade">Fade In Box</div> -->
+
+
+
+
+
+
+
+<!-- START: alternative footer -->
+<footer class="alt-footer">
+  <div class="alt-footer-inner">
+    <div class="alt-brand">
+      <a class="alt-logo" href="./">
+        <img src="./bc remove logo.webp" alt="IT Solutions" width="44" height="44">
+      </a>
+      <div class="alt-about">
+        <h3>IT Solutions</h3>
+        <p>Cloud • DevOps • Web • Security — practical solutions for growing teams.</p>
+      </div>
+    </div>
+
+    <div class="alt-links">
+      <div class="alt-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="./404.html">About</a></li>
+          <li><a href="./404.html">Careers</a></li>
+          <li><a href="./404.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="alt-links-group">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="./404.html">Services</a></li>
+          <li><a href="./404.html">Blog</a></li>
+          <li><a href="./404.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-cta">
+
+      <h4>Socila media</h4>
+      <div class="social-link">
+        <a href="./404.html"> 
+            <img src="./facebook (1).webp" alt="facebook" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./instagram (1).webp" alt="instagram" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./twitter (1).webp" alt="twitter" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./linkedin (1).webp" alt="linkedin" width="400px">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="alt-footer-bottom">
+    <small>© <span id="alt-footer-year"></span> IT Solutions — All rights reserved.</small>
+  </div>
+</footer>
+<!-- END: alternative footer -->
+
+
+<script src="./process.js"></script>
+</body>
+</html>
