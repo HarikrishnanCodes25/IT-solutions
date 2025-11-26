@@ -52,6 +52,7 @@ span{
   gap:12px; 
   text-decoration:none; 
   color:inherit; 
+  margin-left: -6px;
 }
 .brand img { 
   width:60px; 
@@ -64,7 +65,7 @@ span{
   display:flex; 
   flex-direction:column; 
   line-height:1.1rem;
-  
+  margin-left: -10px;
 }
 .brand-title .title { 
   font-weight:700; 
@@ -83,6 +84,8 @@ span{
   border-radius: 8px;
   cursor:pointer;
   font-size: 20px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 /* left (nav + CTA) */
@@ -108,8 +111,11 @@ span{
   border-radius:8px; 
   font-weight:600; 
   display:inline-block; 
+  /* list-style: none; */
 }
 .linkRight a:hover { 
+
+  /* color: orangered; */
   transform:scale(1.3);
 }
 
@@ -277,22 +283,31 @@ span{
 .dp-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:26px;align-items:start}
 
 /* Header */
-.dp-kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.dp-header h2{margin:8px 0 6px;font-size:24px}
+.dp-kicker{display:inline-block;
+  background:#eef8f3;
+  color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.dp-header h2{
+  margin:8px 0 6px;
+  font-size:2.5rem;
+  color: rgb(226, 33, 28);
+}
 .dp-intro{color:#4b4b56;margin:0 0 6px;}
 
 /* Steps list */
-.dp-list{list-style:none;margin:0;padding:0;counter-reset:step}
+.dp-list{list-style:none;margin:0;padding:0;counter-reset:step; background-color: rgb(226, 33, 28);}
 .dp-step{display:flex;gap:18px;padding:12px 14px;border-radius:8px;margin-bottom:12px;border:1px solid #f0f4ff;background:linear-gradient(180deg,#fff,#fbfdff)}
 .step-meta{width:120px;flex-shrink:0;text-align:center}
-.step-num{display:inline-block;width:48px;height:48px;border-radius:50%;line-height:48px;font-weight:800;background:#f6f9ff;border:2px solid #d7e4ff;color:#0b54a0;font-size:16px}
-.step-meta h3{margin:8px 0 0;font-size:16px}
+.step-num{display:inline-block;width:48px;height:48px;border-radius:50%;line-height:48px;font-weight:800;background:white;border:2px solid rgb(226, 33, 28);color:rgb(226, 33, 28);font-size:16px}
+.step-meta h3{margin:8px 0 0;font-size:16px; color: rgb(226, 33, 28);}
 .step-body{flex:1}
 
 /* text blocks */
 .step-desc{margin:0 0 8px;color:#333;font-size:14px}
 .step-points{margin:0 0 8px 0;padding-left:18px}
 .step-points li{margin:6px 0;font-size:14px;color:#4b4b56}
+.strong{
+  color: rgb(239, 94, 89);
+}
 .step-deliver{font-size:13px;color:#11508a;margin:6px 0 0;font-weight:600}
 
 /* Responsive: stack for <=768px */

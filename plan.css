@@ -52,6 +52,7 @@ span{
   gap:12px; 
   text-decoration:none; 
   color:inherit; 
+  margin-left: -6px;
 }
 .brand img { 
   width:60px; 
@@ -64,7 +65,7 @@ span{
   display:flex; 
   flex-direction:column; 
   line-height:1.1rem;
-  
+  margin-left: -10px;
 }
 .brand-title .title { 
   font-weight:700; 
@@ -83,6 +84,8 @@ span{
   border-radius: 8px;
   cursor:pointer;
   font-size: 20px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 /* left (nav + CTA) */
@@ -108,8 +111,11 @@ span{
   border-radius:8px; 
   font-weight:600; 
   display:inline-block; 
+  /* list-style: none; */
 }
 .linkRight a:hover { 
+
+  /* color: orangered; */
   transform:scale(1.3);
 }
 
@@ -233,11 +239,10 @@ span{
 
 
 
-
 /* Fade-in */
 .fade {
   opacity: 0;
-  transition: opacity 0.8s;
+  transition: opacity 6s;
 }
 
 .fade.show {
@@ -249,7 +254,7 @@ span{
 .jump {
   transform: translateY(50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .jump.show {
@@ -262,7 +267,7 @@ span{
 .slide {
   transform: translateX(-50px);
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 6s;
 }
 
 .slide.show {
@@ -286,7 +291,7 @@ span{
 /* header */
 .pricing-header{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
 .kicker{display:inline-block;background:#eef6ff;color:#0b5bb8;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.pricing-header h2{margin:0;font-size:24px}
+.pricing-header h2{margin:0;font-size:2.5rem; color: rgb(226, 33, 28);}
 .lead{margin:0;color:#53565a}
 
 /* billing toggle */
@@ -306,7 +311,7 @@ span{
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 
 /* individual plan */
-.plan{border:1px solid #eef4ff;background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;position:relative;box-shadow:0 6px 18px rgba(12,34,84,0.03)}
+.plan{border:1px solid #eef4ff;background:rgb(241, 182, 180);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;position:relative;box-shadow:0 6px 18px rgba(12,34,84,0.03)}
 .plan-head h3{margin:0;font-size:18px}
 .plan-sub{margin:0;color:#52606a;font-size:13px}
 
@@ -321,21 +326,21 @@ span{
 
 /* features */
 .features{list-style:none;padding:0;margin:0;color:#444;font-size:14px}
-.features li{padding:6px 0;border-top:1px dashed #f1f5fb}
+.features li{padding:6px 0;}
 .features li:first-child{border-top:none;padding-top:0}
 
 /* ctas */
 .plan-cta{display:flex;gap:10px;margin-top:auto}
 .btn{display:inline-block;padding:10px 12px;border-radius:8px;text-decoration:none; font-weight:700;font-size:14px}
-.btn-outline{border:2px solid #d8e9ff;color:#1144a6;background:transparent}
-.btn-primary{background:#1144a6;color:#fff;border:2px solid #1144a6}
+.btn-outline{border:2px solid black;color:black;background:transparent}
+.btn-primary{background:rgb(226, 33, 28);color:#fff;border:2px solid rgb(226, 33, 28)}
 
 /* Comparison table */
 .comparison{margin-top:26px}
 .comparison h4{margin:0 0 10px 0;font-size:16px}
-.compare-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef4ff}
+.compare-table{width:100%;border-collapse:collapse;background:rgb(241, 182, 180);border:1px solid #eef4ff}
 .compare-table th,.compare-table td{padding:12px 14px;border-top:1px solid #f6f9ff;text-align:left;font-size:14px}
-.compare-table thead th{background:#fbfdff;font-weight:700}
+.compare-table thead th{background:rgb(226, 33, 28);font-weight:700; color: white;}
 
 /* small screens: stack plans and adjust layouts */
 @media (max-width:768px){

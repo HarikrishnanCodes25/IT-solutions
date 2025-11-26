@@ -52,6 +52,7 @@ span{
   gap:12px; 
   text-decoration:none; 
   color:inherit; 
+  margin-left: -6px;
 }
 .brand img { 
   width:60px; 
@@ -64,7 +65,7 @@ span{
   display:flex; 
   flex-direction:column; 
   line-height:1.1rem;
-  
+  margin-left: -10px;
 }
 .brand-title .title { 
   font-weight:700; 
@@ -83,6 +84,8 @@ span{
   border-radius: 8px;
   cursor:pointer;
   font-size: 20px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 /* left (nav + CTA) */

@@ -52,6 +52,7 @@ span{
   gap:12px; 
   text-decoration:none; 
   color:inherit; 
+  margin-left: -6px;
 }
 .brand img { 
   width:60px; 
@@ -64,7 +65,7 @@ span{
   display:flex; 
   flex-direction:column; 
   line-height:1.1rem;
-  
+  margin-left: -10px;
 }
 .brand-title .title { 
   font-weight:700; 
@@ -83,6 +84,8 @@ span{
   border-radius: 8px;
   cursor:pointer;
   font-size: 20px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 /* left (nav + CTA) */
@@ -108,8 +111,11 @@ span{
   border-radius:8px; 
   font-weight:600; 
   display:inline-block; 
+  /* list-style: none; */
 }
 .linkRight a:hover { 
+
+  /* color: orangered; */
   transform:scale(1.3);
 }
 
@@ -228,7 +234,6 @@ span{
  }
 
 }
-
 
 
 
@@ -356,7 +361,7 @@ span{
 
 .service-body h3{
   margin:0 0 6px 0;
-  font-size:1.02rem;
+  font-size:1.2rem;
 }
 
 .service-body p{
@@ -401,7 +406,9 @@ span{
   .services-grid{
     grid-template-columns: 1fr;
   }
-
+  .service-body h3{
+    font-size: 1.5rem;
+  }
   .container{
     margin:24px auto;
     padding:0 18px;
