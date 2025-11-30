@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IT Solutions Dashboard</title>
+  <link rel="icon" href="./bc remove logo.webp">
+  <title>Dashboard</title>
   <link rel="stylesheet" href="./dashboard.css" />
 </head>
 <body>
@@ -13,8 +14,11 @@
       <!-- SIDEBAR -->
       <aside class="sidebar" aria-label="Main navigation">
         <div class="brand">
-          <!-- <div class="logo">IT</div> -->
-           <img src="./bc remove logo.webp" alt="" class="logo">
+          <!-- <button id="sidebarToggle" class="sidebar-toggle" aria-controls="sidebarNav" aria-expanded="false" type="button">
+            ☰
+            <span class="visually-hidden">Toggle navigation</span>
+          </button> -->
+          <img src="./bc remove logo.webp" alt="" class="logo">
           <div class="brand-text">
             <h1 class="brand-title">STACKLY</h1>
             <div class="brand-sub">Admin Dashboard</div>
@@ -23,10 +27,10 @@
 
         <ul class="nav" role="navigation">
           <li><a class="nav-link active" href="#">Overview</a></li>
-          <li><a class="nav-link" href="#">Projects</a></li>
-          <li><a class="nav-link" href="#">Tickets</a></li>
-          <li><a class="nav-link" href="#">Clients</a></li>
-          <li><a class="nav-link" href="#">Settings</a></li>
+          <li><a class="nav-link" href="./404.html">Projects</a></li>
+          <li><a class="nav-link" href="./404.html">Tickets</a></li>
+          <li><a class="nav-link" href="./404.html">Clients</a></li>
+          <li><a class="nav-link" href="./404.html">Settings</a></li>
         </ul>
 
         <div class="signed-in">Signed in as <strong>Admin</strong></div>
@@ -48,8 +52,12 @@
           </div>
 
           <div class="actions">
-            <button class="btn ghost" type="button">Notifications</button>
-            <button class="btn primary" type="button">New Project</button>
+            <button class="btn ghost" type="button" onclick="window.location.href='./404.html'">
+              Notifications
+            </button>
+            <button class="btn primary" type="button" onclick="window.location.href='./404.html'">
+              New Project
+            </button>
           </div>
         </header>
 
@@ -142,5 +150,8 @@
       </main>
     </div>
   </div>
+
+
+<script src="./dashboard.js"></script> 
 </body>
 </html>

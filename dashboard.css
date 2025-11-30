@@ -41,6 +41,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===== Sidebar mobile toggle & panel (APPEND to dashboard.css) ===== */
+
+/* hide toggle on desktop */
+.sidebar-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(17,24,39,0.06);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;           /* white on red sidebar */
+}
+
+/* visually-hidden utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Container */
 .container {
   max-width: 1200px;
@@ -63,7 +90,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  background-color: #ffffff;
+  background-color:rgb(226, 33, 28);
   border-radius: 12px;
   padding: 18px;
   box-shadow: 0 8px 20px rgba(17,24,39,0.04);
@@ -99,11 +126,12 @@ body {
   font-size: 16px;
   margin: 0;
   letter-spacing: -0.2px;
+  color: white;
 }
 
 .brand-sub {
   font-size: 12px;
-  color: #6b7280;
+  color:white;
 }
 
 /* Nav */
@@ -126,12 +154,14 @@ body {
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 8px;
-  color: #374151;
+  color:white;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
   background-color: #f3f4f6;
+  color:black;
 }
 
 .nav-link.active {
@@ -144,7 +174,7 @@ body {
 .signed-in {
   margin-top: 14px;
   font-size: 13px;
-  color: #6b7280;
+  color: rgb(233, 172, 59);
 }
 
 /* Main wrap */
@@ -222,13 +252,16 @@ body {
 }
 
 .btn.primary {
-  background-color: #4f46e5;
+  background-color: rgb(226, 33, 28);
   color: #ffffff;
+  font-weight: bold;
 }
 
 .btn.ghost {
-  background-color: transparent;
-  color: #374151;
+  /* background-color:rgb(226, 33, 28); */
+  border: 2px solid rgb(226, 33, 28);
+  color: rgb(226, 33, 28);
+  font-weight: bold;
 }
 
 /* Grid of cards */
@@ -241,7 +274,7 @@ body {
 
 /* Card */
 .card {
-  background-color: #ffffff;
+  background-color:rgb(248, 205, 203);
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 8px 20px rgba(17,24,39,0.04);
@@ -266,7 +299,7 @@ body {
 
 .muted {
   margin: 8px 0 0 0;
-  color: #6b7280;
+  color: black;
   font-size: 13px;
 }
 
@@ -377,6 +410,9 @@ body {
     padding-right: 14px;
   }
 
+  .sidebar .nav { display: none; }
+  .sidebar.open .nav { display: flex; flex-direction: column; }
+
   .nav {
     display: none;
   }
@@ -398,4 +434,79 @@ body {
   .chart {
     height: 180px;
   }
+}
+
+
+
+
+
+
+/* Mobile behaviour */
+@media (max-width: 768px) {
+  /* show the toggle on mobile inside the sidebar */
+  .sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    color: #ffffff;
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* keep sidebar layout compact */
+  .sidebar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* hide nav by default on mobile (your existing rule) */
+  .sidebar .nav {
+    display: none;
+  }
+
+  /* when sidebar has class .open, show nav vertically */
+  .sidebar.open .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    width: 100%;
+  }
+
+  /* tappable nav links */
+  .sidebar .nav-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .sidebar .nav-link:hover,
+  .sidebar .nav-link:focus {
+    background: rgba(255,255,255,0.14);
+    color: #111;
+  }
+
+  /* if you want the nav to appear as an overlay panel (optional), uncomment these */
+  /*
+  .sidebar {
+    position: fixed;
+    left: 8px;
+    top: 12px;
+    bottom: 12px;
+    width: calc(100% - 16px);
+    max-width: 320px;
+    z-index: 99999;
+    background-color: rgb(226, 33, 28);
+    border-radius: 10px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  */
 }
