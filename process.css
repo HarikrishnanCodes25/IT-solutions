@@ -110,7 +110,7 @@ a { text-decoration: none; }
   cursor: pointer;
   font-size: 30px;
   line-height: 1;
-  margin-left: 80px;
+  margin-left: 120px;
   margin-top: 20px;
 }
 
@@ -245,6 +245,9 @@ a { text-decoration: none; }
   .linkRight a { padding: 9px 8px; font-size: 15px; }
   .btn-cta { padding: 9px 12px; font-size: 15px; }
   /* .dropdown-menu a {color: #e11d2a;} */
+  /* hamburger - hidden on larger screens; shown on mobile below */
+
+
 }
 
 @media (max-width: 834px) {
@@ -272,6 +275,7 @@ a { text-decoration: none; }
     border-radius: 8px;
     z-index: 3000;
     position: relative;
+    margin-left: 120px;
   }
 
   .brand { gap: 8px; }
@@ -453,6 +457,7 @@ a { text-decoration: none; }
 
 
 
+
 /* Alternative footer styles - single-block selectors, no :root */
 
 /* alt-footer */
@@ -613,8 +618,10 @@ a { text-decoration: none; }
   margin-top: 18px;
   border-top: 1px solid rgba(255,255,255,0.04);
   padding-top: 12px;
-  color: #9aa7c0;
+  color:white;
   font-size: 13px;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* visually-hidden utility (if needed) */

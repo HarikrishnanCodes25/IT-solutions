@@ -5,20 +5,48 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="icon" href="./bc remove logo.webp">
   <title>Stackly</title>
-  <link rel="stylesheet" href="./consult.css" />
+  <link rel="stylesheet" href="./consult.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">Your Company</a>
-      <nav class="main-nav" aria-label="Top Navigation">
-        <a href="./index.html">Home 1</a>
-        <a href="./home 2.html">Home 2</a>
-        <!-- <a href="/contact">Contact</a> -->
-      </nav>
-    </div>
-  </header>
+<header class="header">
+  <div class="right">
+    <a class="brand" href="./index.html" title="Hari IT Solutions">
+      <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
+      <div class="brand-title">
+        <span class="title">STACKLY</span>
+        <span class="sub">Cloud • DevOps</span>
+        <span class="sub">Web • Security</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">☰</button>
+  </div>
+
+  <div class="left">
+    <nav id="main-nav" class="navBar" aria-label="Main navigation">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html" aria-haspopup="true" aria-expanded="false"><span>H</span>ome ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./home 2.html"><span>H</span>ome page 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./service.html"><span>S</span>ervice</a></li>
+          <li><a href="./process.html"> Working Process</a></li>
+          <li><a href="./plan.html"><span>P</span>rice Plans</a></li>
+          <li><a href="./testimonial.html"><span>T</span>estimonial </a></li>
+          <li><a href="./dashboard.html"><span>D</span>ashboard</a></li>
+          <li><a href="./login.html"><span>L</span>ogIn</a></li>
+          <li><a href="./consult.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <button class="btn-cta" onclick="location.href='./consult.html'">Get Consultation</button> -->
+  </div>
+</header>
 
   <main>
     <!-- Hero -->
@@ -167,11 +195,74 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Company. All rights reserved.</p>
+  <!-- START: alternative footer -->
+<footer class="alt-footer">
+  <div class="alt-footer-inner">
+    <div class="alt-brand">
+
+      <a class="brand" href="./index.html" title="Hari IT Solutions">
+        <img src="./bc remove logo.webp" alt="Hari IT logo" width="40" height="40">
+        <div class="brand-title">
+          <h3>Stackly</h3>
+        <p>Cloud • DevOps • Web • Security — practical solutions for growing teams.</p>
+        </div>
+      </a>
+      <!-- <a class="alt-logo" href="./">
+        <img src="./bc remove logo.webp" alt="IT Solutions" width="44" height="44">
+      </a>
+      <div class="alt-about">
+        <h3>IT Solutions</h3>
+        <p>Cloud • DevOps • Web • Security — practical solutions for growing teams.</p>
+      </div> -->
     </div>
-  </footer>
+
+    <div class="alt-links">
+      <div class="alt-links-group">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./service.html">Service</a></li>
+          <li><a href="./process.html">Our working process</a></li>
+          <li><a href="./plan.html">Pricing plans</a></li>
+        </ul>
+      </div>
+      <div class="alt-links-group">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="./testimonial.html">Testimonial & Clients</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./login.html">LogIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-cta">
+
+      <h4>Socila media</h4>
+      <div class="social-link">
+        <a href="./404.html"> 
+            <img src="./facebook (1).webp" alt="facebook" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./instagram (1).webp" alt="instagram" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./twitter (1).webp" alt="twitter" width="400px">
+        </a>
+        <a href="./404.html">
+            <img src="./linkedin (1).webp" alt="linkedin" width="400px">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="alt-footer-bottom">
+    <small>© <span id="alt-footer-year"></span> IT Solutions — All rights reserved.</small>
+  </div>
+</footer>
+
+
 
   <script src="./consult.js"></script>
 </body>
