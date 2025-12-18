@@ -106,8 +106,8 @@ a { text-decoration: none; }
 .hamburger {
   display: none;
   background: transparent;
-  color: black;
-  border: 1px solid rgba(0,0,0,0.12);
+  color:white;
+  border: 1px solid white;
   padding: 8px 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -275,8 +275,8 @@ font-weight: bold; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -1385,6 +1385,7 @@ font-weight: bold; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */

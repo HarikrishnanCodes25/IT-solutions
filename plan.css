@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,6 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
+  background-color: white;
 }
 
 /* brand text */
@@ -92,11 +94,12 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
@@ -159,13 +162,14 @@ a { text-decoration: none; }
 
 /* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -204,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -270,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -371,6 +376,7 @@ a { text-decoration: none; }
 
 
 
+
 /* Fade-in */
 .fade {
   opacity: 0;
@@ -416,15 +422,72 @@ a { text-decoration: none; }
 
 
 
+
+/* HERO SECTION */
+.pricing-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* HERO CONTENT */
+.pricing-hero-content {
+  max-width: 700px;
+  color: white;
+}
+
+/* HEADING */
+.pricing-hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: rgb(173, 216, 230);
+}
+
+/* PARAGRAPH */
+.pricing-hero-content p {
+  font-size: 18px;
+  color: white;
+}
+@media (max-width: 768px) {
+
+  .pricing-hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .pricing-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .pricing-hero-content p {
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 /* Pricing section - detailed, responsive (no :root variables) */
-.pricing{font-family:Inter, system-ui, Arial, sans-serif;color:#111;padding:32px 18px;background:#fff}
+.pricing{font-family:Inter, system-ui, Arial, sans-serif;color:#111;padding:32px 18px;
+  /* background:#fff */
+}
 .pricing-inner{max-width:1100px;margin:0 auto}
 
 /* header */
 .pricing-header{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
-.kicker{display:inline-block;background:#eef6ff;color:#0b5bb8;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.pricing-header h2{margin:0;font-size:2.5rem; color: rgb(226, 33, 28);}
-.lead{margin:0;color:#53565a}
+.kicker{display:inline-block;color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.pricing-header h2{margin:0;font-size:2.5rem; color: rgb(173, 216, 230);}
+.lead{margin:0;color:white}
 
 /* billing toggle */
 .billing-toggle{display:flex;align-items:center;gap:10px;margin-top:8px}
@@ -443,7 +506,7 @@ a { text-decoration: none; }
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 
 /* individual plan */
-.plan{border:1px solid #eef4ff;background:rgb(241, 182, 180);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;position:relative;box-shadow:0 6px 18px rgba(12,34,84,0.03)}
+.plan{border:1px solid #eef4ff;background:rgb(223, 239, 245);padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:12px;position:relative;box-shadow:0 6px 18px rgba(12,34,84,0.03)}
 .plan-head h3{margin:0;font-size:18px}
 .plan-sub{margin:0;color:#52606a;font-size:13px}
 
@@ -465,14 +528,14 @@ a { text-decoration: none; }
 .plan-cta{display:flex;gap:10px;margin-top:auto}
 .btn{display:inline-block;padding:10px 12px;border-radius:8px;text-decoration:none; font-weight:700;font-size:14px}
 .btn-outline{border:2px solid black;color:black;background:transparent}
-.btn-primary{background:rgb(226, 33, 28);color:#fff;border:2px solid rgb(226, 33, 28)}
+.btn-primary{background:rgb(20, 76, 95);color:#fff}
 
 /* Comparison table */
 .comparison{margin-top:26px}
-.comparison h4{margin:0 0 10px 0;font-size:16px}
-.compare-table{width:100%;border-collapse:collapse;background:rgb(241, 182, 180);border:1px solid #eef4ff}
-.compare-table th,.compare-table td{padding:12px 14px;border-top:1px solid #f6f9ff;text-align:left;font-size:14px}
-.compare-table thead th{background:rgb(226, 33, 28);font-weight:700; color: white;}
+.comparison h4{margin:0 0 10px 0;font-size:16px;color: white;}
+.compare-table{width:100%;border-collapse:collapse;background:rgb(214, 240, 249);border:1px solid #eef4ff}
+.compare-table th,.compare-table td{padding:12px 14px;border-top:1px solid black;text-align:left;font-size:14px}
+.compare-table thead th{background:rgb(14, 46, 58);font-weight:700; color: white;}
 
 /* small screens: stack plans and adjust layouts */
 @media (max-width:768px){
@@ -505,7 +568,7 @@ a { text-decoration: none; }
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -637,7 +700,7 @@ a { text-decoration: none; }
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -649,6 +712,7 @@ a { text-decoration: none; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */

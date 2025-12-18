@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,6 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
+  background-color: white;
 }
 
 /* brand text */
@@ -92,11 +94,12 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
@@ -159,13 +162,14 @@ a { text-decoration: none; }
 
 /* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -204,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -270,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -376,6 +381,7 @@ a { text-decoration: none; }
 
 
 
+
 /* Fade-in */
 .fade {
   opacity: 0;
@@ -420,23 +426,80 @@ a { text-decoration: none; }
 
 
 
+
+/* HERO SECTION */
+.testimonial-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* HERO CONTENT */
+.testimonial-hero-content {
+  max-width: 700px;
+  color: white;
+}
+
+/* HEADING */
+.testimonial-hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: rgb(170, 211, 225);
+}
+
+/* PARAGRAPH */
+.testimonial-hero-content p {
+  font-size: 18px;
+  color: white;
+}
+@media (max-width: 768px) {
+
+  .testimonial-hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .testimonial-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .testimonial-hero-content p {
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 /* Testimonials - responsive, stacks at 768px */
-.testimonials{font-family:Inter, system-ui, Arial, sans-serif;color:#111;padding:36px 18px;background:#fff}
+.testimonials{font-family:Inter, system-ui, Arial, sans-serif;color:#111;padding:36px 18px;
+  /* background:#fff */
+}
 .wrap{max-width:1100px;margin:0 auto}
 .testi-header{margin-bottom:18px}
 .kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.testi-header h2{margin:8px 0 6px;font-size:2.5rem; color: rgb(226, 33, 28);}
-.lead{margin:0;color:#555;font-size:14px}
+.testi-header h2{margin:8px 0 6px;font-size:2.5rem; color:rgb(170, 211, 225);}
+.lead{margin:0;color:white;font-size:14px}
 
 /* Testimonials list - grid for desktop */
 .testi-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 /* individual testimonial */
-.testi{background:rgb(244, 173, 170);border:1px solid #eef4ff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,34,84,0.04);display:flex;flex-direction:column;gap:10px}
+.testi{background:rgb(221, 241, 247);border:1px solid #eef4ff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,34,84,0.04);display:flex;flex-direction:column;gap:10px}
 .meta{display:flex;gap:12px;align-items:center}
 .avatar{width:72px;height:72px;border-radius:12px;object-fit:cover;border:2px solid #f0f6ff}
 .who{display:flex;flex-direction:column}
-.name{font-weight:800;font-size:15px; color: rgb(226, 33, 28);}
-.company{font-size:13px;color:#55606b; color: rgb(226, 33, 28);}
+.name{font-weight:800;font-size:15px; color: rgb(9, 65, 84);}
+.company{font-size:13px;color:#55606b; color:rgb(9, 65, 84);}
 .rating{font-size:14px;color:black;margin-top:6px;line-height:1}
 
 /* quote */
@@ -480,12 +543,12 @@ a { text-decoration: none; }
 .clients-inner{max-width:1100px;margin:0 auto}
 .clients-header{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
 .kicker{display:inline-block;background:#eef8f3;color:#0a6b2f;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
-.clients-header h2{margin:0;font-size: 2.5rem; color: rgb(226, 33, 28);}
+.clients-header h2{margin:0;font-size: 2.5rem; color: rgb(9, 65, 84);}
 .lead{margin:0;color:#55606b;font-size:14px}
 
 /* client stats */
 .client-stats{margin-top:8px;display:inline-flex;align-items:baseline;gap:8px}
-.client-stats .count{font-size:20px;font-weight:800;color:rgb(226, 33, 28)}
+.client-stats .count{font-size:20px;font-weight:800;color:rgb(9, 65, 84)}
 .client-stats .text{font-size:13px;color:#52606a}
 
 /* Logo grid: responsive columns */
@@ -506,7 +569,7 @@ a { text-decoration: none; }
 
 /* Industries */
 .industries{margin-top:22px;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
-.industries h3{margin:0 0 6px 0;font-size:18px; color: rgb(226, 33, 28);}
+.industries h3{margin:0 0 6px 0;font-size:18px; color:rgb(9, 65, 84);}
 .industries ul{list-style:disc;margin:0;padding-left:18px;color:#374151}
 .industries li{margin:6px 0;font-size:14px}
 
@@ -548,7 +611,7 @@ a { text-decoration: none; }
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -680,7 +743,7 @@ a { text-decoration: none; }
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -692,6 +755,7 @@ a { text-decoration: none; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */

@@ -8,6 +8,7 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -28,7 +29,7 @@ a { text-decoration: none; }
 /* Card */
 .card {
   width: 420px;
-  background: #ffffff;
+  background: rgb(170, 211, 225);
   border-radius: 12px;
   box-shadow: 0 8px 28px rgba(12, 32, 64, 0.08);
   padding: 34px 30px;
@@ -49,7 +50,7 @@ a { text-decoration: none; }
   height: 34px;
   border-radius: 6px;
   transform: rotate(45deg);
-  background:rgb(226, 33, 28);
+  background:rgb(8, 74, 96);
   box-shadow: 0 6px 18px rgba(216, 243, 38, 0.12);
 }
 
@@ -88,7 +89,7 @@ a { text-decoration: none; }
   margin-top: 6px;
   font-size: 24px;
   margin-bottom: 6px;
-  color: rgb(226, 33, 28);
+  color: black;
 }
 
 .subtitle {
@@ -187,14 +188,15 @@ a { text-decoration: none; }
 }
 
 .error {
-  color: #c53030;
+  color: black;
+  font-weight: bold;
   font-size: 13px;
   margin: 8px 0 12px;
   text-align: left;
 }
 
 input.invalid {
-  border-color: rgba(255, 80, 80, 0.9) !important;
+  border-color: rgb(8, 74, 96) !important;
   box-shadow: 0 4px 18px rgba(255, 80, 80, 0.08);
 }
 
@@ -209,7 +211,7 @@ input.invalid {
   border-radius: 28px;
   border: none;
   cursor: pointer;
-  background: rgb(226, 33, 28);
+  background: rgb(8, 74, 96);
   box-shadow: 0 12px 30px rgba(216, 243, 38, 0.18);
   color: white;
 }

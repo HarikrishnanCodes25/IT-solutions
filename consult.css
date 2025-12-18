@@ -12,6 +12,8 @@ html, body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
+  /* background: linear-gradient(135deg,rgb(74, 75, 84),rgb(45, 49, 70),rgb(92, 68, 164)); */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -27,9 +29,8 @@ a { text-decoration: none; }
   flex-direction: row;
   gap: 48px;
   padding: 10px 18px;
-  background: rgb(247, 247, 247);
-  color: rgb(226, 33, 28);
   align-items: center;
+   background: linear-gradient(150deg,rgb(68, 72, 91),rgb(82, 63, 82),rgb(82, 63, 82));
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -74,6 +75,7 @@ a { text-decoration: none; }
   border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
+  background-color: white;
 }
 
 /* brand text */
@@ -92,12 +94,12 @@ a { text-decoration: none; }
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: black;
+  color:white;
 }
 
 .brand-title .sub {
   font-size: 12px;
-  color: black;
+  color:white;
 }
 
 /* hamburger - hidden on larger screens; shown on mobile below */
@@ -158,15 +160,16 @@ a { text-decoration: none; }
 }
 .linkRight::-webkit-scrollbar { display: none; }
 
- /* links */
+/* links */
 .linkRight a {
-  color: black;
+  color: white;
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-block;
 }
-.linkRight a:hover { color: orangered; }
+.linkRight a:hover { color:rgb(173, 216, 230);
+font-weight: bold; }
 
 /* dropdown parent */
 .dropdown {
@@ -205,7 +208,8 @@ a { text-decoration: none; }
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   /* background: rgba(226,33,28,0.06); */
-  color: #e11d2a;
+  color:rgb(173, 216, 230);
+  font-weight: bold;
 }
 
 /* Desktop: show submenu on hover/focus for pointer devices */
@@ -271,8 +275,8 @@ a { text-decoration: none; }
     height: 44px;
     padding: 6px;
     background: transparent;
-    color: #111;
-    border: 1px solid rgba(0,0,0,0.12);
+    color: white;
+    border: 1px solid white;
     border-radius: 8px;
     z-index: 3000;
     position: relative;
@@ -372,6 +376,9 @@ a { text-decoration: none; }
 
 
 
+
+
+
 /* Container utility */
 .container {
   /* max-width: 1100px; */
@@ -414,7 +421,7 @@ a { text-decoration: none; }
 /* Hero */
 .hero {
   padding: 26px 0;
-  background: linear-gradient(180deg,#f8fbff,#ffffff);
+  /* background: linear-gradient(180deg,#f8fbff,#ffffff); */
 }
 .hero-inner {
   display: grid;
@@ -428,17 +435,18 @@ a { text-decoration: none; }
 .hero-title {
   font-size: 2.5rem;
   text-shadow: 1px 1px 2px;
-  color: rgb(226, 33, 28);
+  color: rgb(170, 211, 225);
   margin: 0 0 8px 0;
 }
 .hero-sub {
   margin: 0 0 12px 0;
-  color: #475569;
+  color: white;
   font-size: 14px;
 }
 .hero-list {
   list-style: disc;
   margin: 12px 0 0 18px;
+  color: white;
 }
 .hero-cta {
   margin-top: 16px;
@@ -447,29 +455,33 @@ a { text-decoration: none; }
 
 /* Contact card */
 .contact-card {
-  background-color: rgb(226, 33, 28);
+  background-color: rgb(170, 211, 225);
   border: 1px solid #e6eef6;
   padding: 14px;
 }
 .card-title {
   margin: 0 0 6px 0;
   font-size: 16px;
-  color: white;
+  color:black;
   text-decoration: underline;
 }
 .card-desc {
   margin: 0 0 10px 0;
   font-size: 14px;
-  color: white;
+  color: black;
 }
 .card-phone a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .card-email a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
+
+
+
+
 
 /* Consult section */
 .consult-section {
@@ -486,12 +498,12 @@ a { text-decoration: none; }
 .section-title {
   font-size: 2.5rem !important;
   text-shadow: 1px 1px 2px;
-  color: rgb(226, 33, 28);
+  color: rgb(170, 211, 225);
   margin: 0 0 8px 0;
 }
 .section-desc {
   margin: 0 0 16px 0;
-  color: #475569;
+  color: white;
   font-size: 14px;
 }
 
@@ -508,7 +520,7 @@ a { text-decoration: none; }
   margin-bottom: 6px;
   font-size: 13px;
   font-weight: bold;
-  color:rgb(245, 114, 110);
+  color:rgb(170, 211, 225);
 }
 .input {
   width: 100%;
@@ -554,6 +566,10 @@ a { text-decoration: none; }
   align-items: center;
   gap: 8px;
 }
+
+.small-note label{
+  color: white;
+}
 .small-note input[type="checkbox"] {
   margin: 0;
 }
@@ -562,8 +578,8 @@ a { text-decoration: none; }
 .btn {
   display: inline-block;
   padding: 10px 16px;
-  background-color: rgb(226, 33, 28);
-  color: #ffffff;
+  background-color: rgb(170, 211, 225);
+  color:black;
   border: none;
   border-radius: 8px;
   font-weight: 700;
@@ -575,7 +591,7 @@ a { text-decoration: none; }
   margin-top: 22px;
 }
 .info-block {
-  background-color:rgb(226, 33, 28);
+  background-color:rgb(170, 211, 225);
   border: 1px solid #e6eef6;
   padding: 14px;
   margin-bottom: 12px;
@@ -584,13 +600,13 @@ a { text-decoration: none; }
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 1.3rem;
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 .info-list {
   margin: 0 0 0 16px;
   padding: 0;
-  color: white;
+  color: black;
 }
 .info-list li {
   margin-bottom: 8px;
@@ -602,7 +618,7 @@ a { text-decoration: none; }
   margin: 0;
   font-style: italic;
   font-size: 14px;
-  color: white;
+  color: black;
 }
 .quote cite {
   display: block;
@@ -619,10 +635,10 @@ a { text-decoration: none; }
   margin: 0 0 12px 0;
   font-size: 1.3rem;
   text-shadow: 1px 1px 2px;
-  color: rgb(226, 33, 28);
+  color:rgb(170, 211, 225);
 }
 .faq-list details {
-  background-color: rgb(251, 196, 196);
+  background-color:rgb(170, 211, 225);
   border: 1px solid #eef2f6;
   border-radius: 8px;
   padding: 10px 12px;
@@ -773,7 +789,7 @@ a { text-decoration: none; }
 
 /* alt-footer */
 .alt-footer {
-  background-color: rgb(226, 33, 28);
+  /* background-color: rgb(226, 33, 28); */
   color: #e6eef8;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
   padding-top: 36px;
@@ -801,6 +817,13 @@ a { text-decoration: none; }
   align-items: flex-start;
 }
 
+.brand-title h3{
+  color: white;
+}
+.brand-title p{
+  color: white;
+  /* font-size: 20px; */
+}
 /* alt-logo anchor */
 .alt-logo {
   display: inline-flex;
@@ -905,7 +928,7 @@ a { text-decoration: none; }
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  background: white;
   text-decoration: none;
   overflow: hidden;
 }
@@ -917,6 +940,7 @@ a { text-decoration: none; }
   height: 20px;
   object-fit: contain;
   filter: none;
+  background-color: white;
 }
 
 /* alt-footer-bottom */
@@ -1006,45 +1030,3 @@ a { text-decoration: none; }
     text-align: center;
   }
 }
-
-/* =========================
-   Validation & message UI
-   ========================= */
-
-/* Input error outline */
-.input.error,
-.select.error,
-.textarea.error,
-input.error[type="checkbox"] {
-  outline: 2px solid #d9534f;
-  box-shadow: 0 0 0 3px rgba(217,83,79,0.06);
-  border-color: #d9534f;
-}
-
-/* small inline error text */
-.error-message {
-  color: #d9534f;
-  font-size: 0.9rem;
-  margin-top: 6px;
-}
-
-/* top form messages (success / error) */
-.form-message {
-  margin-bottom: 1rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 6px;
-  font-weight: 600;
-  display: none;
-}
-.form-message.show { display: block; }
-.form-message.success {
-  background: rgba(40,167,69,0.08);
-  color: #28632a;
-}
-.form-message.error {
-  background: rgba(217,83,79,0.08);
-  color: #a33b36;
-}
-
-/* Visually hide the browser default tooltip effect on invalid when using custom messages */
-input:invalid { box-shadow: none; }
